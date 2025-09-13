@@ -1,0 +1,66 @@
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== IDEs =====
+# Eclipse / Spring Tool Suite
+.classpath
+.project
+.settings/
+.factorypath
+.springBeans
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code
+.vscode/
+
+# ===== Java =====
+*.class
+hs_err_pid*
+replay_pid*
+
+# ===== Maven =====
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+dependency-reduced-pom.xml
+
+# ===== Logs & Temp =====
+logs/
+**/*.log
+**/*.tmp
+*.swp
+*.swo
+
+# ===== Spring local env / secrets (optional patterns) =====
+.env
+.env.*
+*.env
+**/application-local.properties
+**/application-local.yml
+
+# ===== Databases (H2, etc.) =====
+*.h2.db
+*.mv.db
+*.db
+
+# ===== Test reports / coverage =====
+surefire-reports/
+failsafe-reports/
+jacoco.exec
+coverage/
+
+# ===== Misc build outputs =====
+bin/
+out/
+build/
+
+# ===== Docker (optional) =====
+docker-data/
