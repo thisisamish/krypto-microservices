@@ -64,3 +64,6 @@ build/
 
 # ===== Docker (optional) =====
 docker-data/
+
+*.postman_collection.json
+*.pem
