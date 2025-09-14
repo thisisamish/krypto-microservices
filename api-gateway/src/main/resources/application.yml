@@ -14,18 +14,18 @@ spring:
       server:
         webmvc:
           routes:
-            - id: user-auth
+            - id: user-service
               uri: lb://user-service
               predicates: [Path=/auth/**]
               filters:
                 - RemoveRequestHeader=Cookie
-            - id: products
+            - id: product-service
               uri: lb://product-service
               predicates:
-                - Path=/api/v1/products/**
+                - Path=/api/v1/products/**,/internal/inventory/**
               filters:
                 - RemoveRequestHeader=Cookie
-            - id: orders
+            - id: order-service
               uri: lb://order-service
               predicates:
                 - Path=/api/v1/orders/**

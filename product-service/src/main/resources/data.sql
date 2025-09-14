@@ -36,3 +36,6 @@ INSERT INTO products (name, description, size, price, stock_quantity, discount_p
 INSERT INTO products (name, description, size, price, stock_quantity, discount_percent, image_url) VALUES ('Coca-Cola Soft Drink Bottle', 'Coca-Cola Soft Drink Bottle 750 ml', '750 ml', 40.00, 100, 5, 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_252,h_272/coca-cola.png');
 INSERT INTO products (name, description, size, price, stock_quantity, discount_percent, image_url) VALUES ('Kissan Mixed Fruit Jam', 'Kissan Mixed Fruit Jam 500 g', '500 g', 120.00, 100, 0, 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_252,h_272/kissan-jam.png');
 INSERT INTO products (name, description, size, price, stock_quantity, discount_percent, image_url) VALUES ('Tata Sampann Unpolished Toor Dal', 'Tata Sampann Unpolished Toor Dal 1 kg', '1 kg', 145.00, 100, 9, 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_252,h_272/tata-toor-dal.png');
+
+-- Ensure version is non-null to keep Hibernate happy
+UPDATE products SET version = 0 WHERE version IS NULL;
