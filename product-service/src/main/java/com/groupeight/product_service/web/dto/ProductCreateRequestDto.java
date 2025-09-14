@@ -8,7 +8,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 import jakarta.validation.constraints.Size;
 
-public record ProductRequestDto(
+public record ProductCreateRequestDto(
 		@NotBlank(message = "Product name cannot be blank.") @Size(min = 3, max = 100, message = "Product name must be between 3 and 100 characters.") String name,
 		String description,
 		@NotNull(message = "Price is required.") @DecimalMin(value = "0.01", message = "Price must be greater than 0.") BigDecimal price,
