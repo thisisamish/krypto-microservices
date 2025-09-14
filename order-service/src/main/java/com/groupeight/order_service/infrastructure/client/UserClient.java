@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(name = "user-service", path = "/internal/users", contextId = "userClient")
+@FeignClient(name = "user-service", path = "/internal/users", contextId = "userClient", configuration = com.groupeight.order_service.config.FeignSecurityConfig.class)
 public interface UserClient {
 	
 	@GetMapping("/{id}/default-shipping")

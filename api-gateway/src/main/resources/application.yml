@@ -4,33 +4,54 @@ server:
 spring:
   application:
     name: api-gateway
+
   security:
     oauth2:
       resourceserver:
         jwt:
           public-key-location: classpath:public.pem
+
   cloud:
     gateway:
-      server:
-        webmvc:
-          routes:
-            - id: user-service
-              uri: lb://user-service
-              predicates: [Path=/auth/**]
-              filters:
-                - RemoveRequestHeader=Cookie
-            - id: product-service
-              uri: lb://product-service
-              predicates:
-                - Path=/api/v1/products/**,/internal/inventory/**
-              filters:
-                - RemoveRequestHeader=Cookie
-            - id: order-service
-              uri: lb://order-service
-              predicates:
-                - Path=/api/v1/orders/**
-              filters:
-                - RemoveRequestHeader=Cookie
+      # Global CORS (applies to all routes)
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        cors-configurations:
+          '[/**]':
+            allowedOrigins:
+              - "http://localhost:4200"
+            allowedMethods: [GET, POST, PUT, PATCH, DELETE, OPTIONS]
+            allowedHeaders: "*"
+            exposedHeaders: [Authorization, Content-Type]
+            allowCredentials: true
+            maxAge: 3600
+
+      # Apply a filter to every route (works with MVC too)
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials RETAIN_UNIQUE
+
+      mvc:
+        routes:
+          - id: user-service
+            uri: lb://user-service
+            predicates:
+              - Path=/auth/**
+            filters:
+              - RemoveRequestHeader=Cookie
+
+          - id: product-service
+            uri: lb://product-service
+            predicates:
+              - Path=/api/v1/products/**,/internal/inventory/**
+            filters:
+              - RemoveRequestHeader=Cookie
+
+          - id: order-service
+            uri: lb://order-service
+            predicates:
+              - Path=/api/v1/**
+            filters:
+              - RemoveRequestHeader=Cookie
 
 eureka:
   client:

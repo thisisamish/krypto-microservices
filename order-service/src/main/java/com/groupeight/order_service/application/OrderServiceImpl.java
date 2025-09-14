@@ -27,8 +27,7 @@ public class OrderServiceImpl implements OrderService {
 
 	@Override
 	public Page<OrderSummaryDto> listMyOrders(Long userId, Pageable pageable) {
-		return null;
-//		return orderRepository.findByUserId(userId, pageable)
-//				.map(o -> new OrderSummaryDto(o.getOrderNumber(), o.getStatus(), o.getGrandTotal(), o.getCreatedAt()));
+		return orderRepository.findByUserId(userId, pageable).map(o -> new OrderSummaryDto(userId, o.getOrderNumber(),
+				o.getStatus(), o.getGrandTotal(), o.getCreatedAt(), o.getUsernameSnapshot(), o.getPaymentStatus()));
 	}
 }

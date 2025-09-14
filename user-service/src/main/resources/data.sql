@@ -1,12 +1,12 @@
--- Admins
-INSERT INTO users (username, password, email, user_role, is_super_admin, created_at) VALUES ('superadmin', '$2a$12$4L3PlSSdbSXSkSJZIpeQl.San2p9Juw4EKF3/Tn0pcx3pKrdS1D.q', 'superadmin@example.com', 'ADMIN', TRUE, CURRENT_TIMESTAMP());
-INSERT INTO users (username, password, email, user_role, is_super_admin, created_at) VALUES ('badmin', '$2a$12$4L3PlSSdbSXSkSJZIpeQl.San2p9Juw4EKF3/Tn0pcx3pKrdS1D.q', 'badmin@example.com', 'ADMIN', FALSE, CURRENT_TIMESTAMP());
-INSERT INTO users (username, password, email, user_role, is_super_admin, created_at) VALUES ('admin1', '$2a$12$4L3PlSSdbSXSkSJZIpeQl.San2p9Juw4EKF3/Tn0pcx3pKrdS1D.q', 'admin1@example.com', 'ADMIN', FALSE, CURRENT_TIMESTAMP());
-INSERT INTO users (username, password, email, user_role, is_super_admin, created_at) VALUES ('admin2', '$2a$12$4L3PlSSdbSXSkSJZIpeQl.San2p9Juw4EKF3/Tn0pcx3pKrdS1D.q', 'admin2@example.com', 'ADMIN', FALSE, CURRENT_TIMESTAMP());
-
--- Customers
-INSERT INTO users (username, first_name, password, email, user_role, is_super_admin, created_at) VALUES ('amishverma', 'Amish', '$2a$12$4L3PlSSdbSXSkSJZIpeQl.San2p9Juw4EKF3/Tn0pcx3pKrdS1D.q', 'amishverma@example.com', 'CUSTOMER', FALSE, CURRENT_TIMESTAMP());
-INSERT INTO users (username, first_name, password, email, user_role, is_super_admin, created_at) VALUES ('akanksha', 'Akanksha', '$2a$12$4L3PlSSdbSXSkSJZIpeQl.San2p9Juw4EKF3/Tn0pcx3pKrdS1D.q', 'akanksha@example.com', 'CUSTOMER', FALSE, CURRENT_TIMESTAMP());
-INSERT INTO users (username, first_name, password, email, user_role, is_super_admin, created_at) VALUES ('talhakhan', 'Talha', '$2a$12$4L3PlSSdbSXSkSJZIpeQl.San2p9Juw4EKF3/Tn0pcx3pKrdS1D.q', 'talhakhan@example.com', 'CUSTOMER', FALSE, CURRENT_TIMESTAMP());
-INSERT INTO users (username, first_name, password, email, user_role, is_super_admin, created_at) VALUES ('govindsingh', 'Govind', '$2a$12$4L3PlSSdbSXSkSJZIpeQl.San2p9Juw4EKF3/Tn0pcx3pKrdS1D.q', 'govindsingh@example.com', 'CUSTOMER', FALSE, CURRENT_TIMESTAMP());
-INSERT INTO users (username, first_name, password, email, user_role, is_super_admin, created_at) VALUES ('nileshpunj', 'Nilesh', '$2a$12$4L3PlSSdbSXSkSJZIpeQl.San2p9Juw4EKF3/Tn0pcx3pKrdS1D.q', 'nileshpunj@example.com', 'CUSTOMER', FALSE, CURRENT_TIMESTAMP());
+---- Admins
+--INSERT INTO users (username, password, email, user_role, is_super_admin, created_at) VALUES ('superadmin', '$2a$12$4L3PlSSdbSXSkSJZIpeQl.San2p9Juw4EKF3/Tn0pcx3pKrdS1D.q', 'superadmin@example.com', 'ADMIN', TRUE, CURRENT_TIMESTAMP());
+--INSERT INTO users (username, password, email, user_role, is_super_admin, created_at) VALUES ('badmin', '$2a$12$4L3PlSSdbSXSkSJZIpeQl.San2p9Juw4EKF3/Tn0pcx3pKrdS1D.q', 'badmin@example.com', 'ADMIN', FALSE, CURRENT_TIMESTAMP());
+--INSERT INTO users (username, password, email, user_role, is_super_admin, created_at) VALUES ('admin1', '$2a$12$4L3PlSSdbSXSkSJZIpeQl.San2p9Juw4EKF3/Tn0pcx3pKrdS1D.q', 'admin1@example.com', 'ADMIN', FALSE, CURRENT_TIMESTAMP());
+--INSERT INTO users (username, password, email, user_role, is_super_admin, created_at) VALUES ('admin2', '$2a$12$4L3PlSSdbSXSkSJZIpeQl.San2p9Juw4EKF3/Tn0pcx3pKrdS1D.q', 'admin2@example.com', 'ADMIN', FALSE, CURRENT_TIMESTAMP());
+--
+---- Customers
+--INSERT INTO users (username, first_name, password, email, user_role, is_super_admin, created_at) VALUES ('amishverma', 'Amish', '$2a$12$4L3PlSSdbSXSkSJZIpeQl.San2p9Juw4EKF3/Tn0pcx3pKrdS1D.q', 'amishverma@example.com', 'CUSTOMER', FALSE, CURRENT_TIMESTAMP());
+--INSERT INTO users (username, first_name, password, email, user_role, is_super_admin, created_at) VALUES ('akanksha', 'Akanksha', '$2a$12$4L3PlSSdbSXSkSJZIpeQl.San2p9Juw4EKF3/Tn0pcx3pKrdS1D.q', 'akanksha@example.com', 'CUSTOMER', FALSE, CURRENT_TIMESTAMP());
+--INSERT INTO users (username, first_name, password, email, user_role, is_super_admin, created_at) VALUES ('talhakhan', 'Talha', '$2a$12$4L3PlSSdbSXSkSJZIpeQl.San2p9Juw4EKF3/Tn0pcx3pKrdS1D.q', 'talhakhan@example.com', 'CUSTOMER', FALSE, CURRENT_TIMESTAMP());
+--INSERT INTO users (username, first_name, password, email, user_role, is_super_admin, created_at) VALUES ('govindsingh', 'Govind', '$2a$12$4L3PlSSdbSXSkSJZIpeQl.San2p9Juw4EKF3/Tn0pcx3pKrdS1D.q', 'govindsingh@example.com', 'CUSTOMER', FALSE, CURRENT_TIMESTAMP());
+--INSERT INTO users (username, first_name, password, email, user_role, is_super_admin, created_at) VALUES ('nileshpunj', 'Nilesh', '$2a$12$4L3PlSSdbSXSkSJZIpeQl.San2p9Juw4EKF3/Tn0pcx3pKrdS1D.q', 'nileshpunj@example.com', 'CUSTOMER', FALSE, CURRENT_TIMESTAMP());
